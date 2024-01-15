@@ -13,15 +13,14 @@ class ControlInterrupt
 public:
   ControlInterrupt(int commonPin, int arrLength, int buttonPins[]);
   void begin();
-  void pressInterrupt();
   void configureCommon();
   void configureDistinct();
   void press(int button);
-  
 
 private:
   int _commonPin;
   int _arrLength;
   int _buttonPins[];
+  void pressInterrupt();
 };
 #endif
